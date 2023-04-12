@@ -2,6 +2,7 @@ package My_2D_Game;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyListener;
 
 public class GUI {
     GUI(){
@@ -11,10 +12,12 @@ public class GUI {
     GamePanel gp = new GamePanel();
 
     public void render() {
-//        frame.setSize(400, 400);
+       frame.setSize(400, 400);
 
         frame.add(gp);
-        frame.pack();
+        gp.startGameThread();
+        //gp.update();
+        //frame.pack();
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
